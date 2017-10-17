@@ -1,13 +1,21 @@
 package campuspeople;
 
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  * 
  */
 public class Person {
 
+    private final SimpleDateFormat myFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+    
     /**
      * The given name of a Person
      */
@@ -45,6 +53,7 @@ public class Person {
     }
 
     /**
+     * Instantiates a Person and initializes each value to the given param
      * @param firstname 
      * @param lastname 
      * @param studentId 
@@ -55,106 +64,102 @@ public class Person {
         this.firstname = firstname;
         this.lastname = lastname;
         this.studentId = studentId;
-        this.birthDate = new Date();
-        String[] dateArray = birthDate.split("/");
-        this.birthDate.setYear(Integer.parseInt(dateArray[2].trim()));
-        this.birthDate.setMonth(Integer.parseInt(dateArray[1].trim()));
-        this.birthDate.setYear(Integer.parseInt(dateArray[0].trim()));
+        try {
+            this.birthDate = myFormat.parse(birthDate);
+        } catch (ParseException ex) {
+            JOptionPane.showMessageDialog(null, "Invalid Birth Date Format. Birth Date Note Set.", "Birth Date Error", JOptionPane.ERROR_MESSAGE);
+            Logger.getLogger(Person.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.phoneNumber = phoneNumber;
     }
 
     /**
-     * @param firstname 
-     * @return
+     * Set this Person's firstname to the given firstname
+     * @param firstname
      */
     public void setFirstName(String firstname) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        this.firstname = firstname;
     }
 
     /**
-     * @return
+     * Retrieve firstname
+     * @return this Person's assigned value for first name
      */
     public String getFirstName() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return this.firstname;
     }
 
     /**
-     * @param lastname 
-     * @return
+     * Assign the given lastname to the Person's lastname
+     * @param lastname
      */
     public void setLastName(String lastname) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        this.lastname = lastname;
     }
 
     /**
-     * @return
+     * Retrieve the family name of this Person
+     * @return this Person objects assigned lastname
      */
     public String getLastName() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
-
+        return this.lastname;
     }
 
     /**
-     * @param studentId 
-     * @return
+     * Assign the given String to this Person's studentId
+     * @param studentId a 9 digit number assigned by the school 
      */
     public void setStudentId(String studentId) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        this.studentId = studentId;
     }
 
     /**
-     * @return
+     * Retrieve the school issues 9-digit ID for this Person as a String
+     * @return the studentId for this Person
      */
     public String getStudentId() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return this.studentId;
     }
 
     /**
-     * @param birthDate 
-     * @return
+     * Sets the given java date to this Person's birthDate
+     * @param birthDate as a java Data
      */
     public void setBirthDate(Date birthDate) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        this.birthDate = birthDate;
     }
 
     /**
-     * @return
+     * Retrieves the Person's date of birth
+     * @return java Date for the Person's birthday
      */
     public Date getBirthDate() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return this.birthDate;
     }
 
     /**
-     * @param phoneNumber 
-     * @return
+     * Sets the given 10-digit formatted phone number this Person's phone number 
+     * @param phoneNumber as a String in the format "###-###-####"
      */
     public void setPhoneNumber(String phoneNumber) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        this.phoneNumber = phoneNumber;
     }
 
     /**
-     * @return
+     * Retrieves this Person's phone number
+     * @return phone number as a String in the format "###-###-####"
      */
     public String getPhoneNumber() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return this.phoneNumber;
     }
 
     /**
-     * @return
+     * Returns a string representation of this Person
+     * @return String representing this person in accordance with the documentation
      */
     public String toString() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        String birthDateString = myFormat.format(lastname);
+        return this.firstname + ", " + this.lastname + ", " + this.studentId + ", " + birthDateString + ", " + this.phoneNumber;
     }
 
 }
