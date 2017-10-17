@@ -65,7 +65,7 @@ public class Person {
      */
     public void setFirstName(String firstname) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -73,7 +73,7 @@ public class Person {
      */
     public String getFirstName() {
         // TODO implement here
-        return "";
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -82,7 +82,7 @@ public class Person {
      */
     public void setLastName(String lastname) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -90,7 +90,8 @@ public class Person {
      */
     public String getLastName() {
         // TODO implement here
-        return "";
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+
     }
 
     /**
@@ -99,7 +100,7 @@ public class Person {
      */
     public void setStudentId(String studentId) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -107,7 +108,7 @@ public class Person {
      */
     public String getStudentId() {
         // TODO implement here
-        return "";
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -116,7 +117,7 @@ public class Person {
      */
     public void setBirthDate(Date birthDate) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -124,7 +125,7 @@ public class Person {
      */
     public Date getBirthDate() {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -133,7 +134,7 @@ public class Person {
      */
     public void setPhoneNumber(String phoneNumber) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -141,7 +142,7 @@ public class Person {
      */
     public String getPhoneNumber() {
         // TODO implement here
-        return "";
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -149,7 +150,7 @@ public class Person {
      */
     public String toString() {
         // TODO implement here
-        return "";
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
 }
