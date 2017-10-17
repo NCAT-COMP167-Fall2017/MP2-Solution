@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class Person {
 
-    private final SimpleDateFormat myFormat = new SimpleDateFormat("dd/MM/yyyy");
+    private final SimpleDateFormat myDateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
     
     /**
@@ -65,7 +65,7 @@ public class Person {
         this.lastname = lastname;
         this.studentId = studentId;
         try {
-            this.birthDate = myFormat.parse(birthDate);
+            this.birthDate = myDateFormat.parse(birthDate);
         } catch (ParseException ex) {
             JOptionPane.showMessageDialog(null, "Invalid Birth Date Format. Birth Date Note Set.", "Birth Date Error", JOptionPane.ERROR_MESSAGE);
             Logger.getLogger(Person.class.getName()).log(Level.SEVERE, null, ex);
@@ -158,7 +158,7 @@ public class Person {
      * @return String representing this person in accordance with the documentation
      */
     public String toString() {
-        String birthDateString = myFormat.format(lastname);
+        String birthDateString = myDateFormat.format(lastname);
         return this.firstname + ", " + this.lastname + ", " + this.studentId + ", " + birthDateString + ", " + this.phoneNumber;
     }
 
