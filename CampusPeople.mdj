@@ -1422,7 +1422,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "+addClass(class: String): void",
+											"text": "+addClass(className: String): void",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -1451,7 +1451,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "+setClass(index: int, class: String): null",
+											"text": "+setClass(index: int, className: String): null",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -7325,7 +7325,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFfKpObYQSJTyQ="
 									},
-									"name": "class",
+									"name": "className",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
@@ -7388,7 +7388,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFfKpOpfwSPf9M="
 									},
-									"name": "class",
+									"name": "className",
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
