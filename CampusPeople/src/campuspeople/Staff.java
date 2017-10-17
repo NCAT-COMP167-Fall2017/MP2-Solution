@@ -42,7 +42,7 @@ public class Staff extends Employee {
      */
     public void setJobTitle(String jobTitle) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -50,7 +50,7 @@ public class Staff extends Employee {
      */
     public String getJobTitle() {
         // TODO implement here
-        return "";
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -59,7 +59,7 @@ public class Staff extends Employee {
      */
     public void setSupervisor(String supervisor) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -67,7 +67,7 @@ public class Staff extends Employee {
      */
     public void getSupervisor() {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -76,7 +76,7 @@ public class Staff extends Employee {
      */
     public void setCareerBand(String careerBand) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -84,7 +84,7 @@ public class Staff extends Employee {
      */
     public String getCareerBand() {
         // TODO implement here
-        return "";
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -92,7 +92,7 @@ public class Staff extends Employee {
      */
     public String toString() {
         // TODO implement here
-        return "";
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
 }
