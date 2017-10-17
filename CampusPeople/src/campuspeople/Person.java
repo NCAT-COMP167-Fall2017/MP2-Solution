@@ -9,12 +9,6 @@ import java.util.*;
 public class Person {
 
     /**
-     * Default constructor
-     */
-    public Person() {
-    }
-
-    /**
      * 
      */
     protected String firstname;
@@ -38,8 +32,17 @@ public class Person {
      * 
      */
     protected String phoneNumber;
-
-
+    
+    /**
+     * Default constructor
+     */
+    public Person() {
+        firstname = "";
+        lastname = "";
+        studentId = "";
+        birthDate = new Date();
+        phoneNumber = "";
+    }
 
     /**
      * 
