@@ -74,7 +74,7 @@ public class Employee extends Person {
      * @param department 
      * @return
      */
-    public void setDepartment(Status department) {
+    public void setDepartment(String department) {
         // TODO implement here
         throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }

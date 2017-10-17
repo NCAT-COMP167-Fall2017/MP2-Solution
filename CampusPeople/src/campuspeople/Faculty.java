@@ -42,7 +42,7 @@ public class Faculty extends Employee {
      */
     public void setRank(String rank) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -50,7 +50,7 @@ public class Faculty extends Employee {
      */
     public String getRank() {
         // TODO implement here
-        return "";
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -59,7 +59,8 @@ public class Faculty extends Employee {
      */
     public void setResearchArea(String researchArea) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+
     }
 
     /**
@@ -67,7 +68,7 @@ public class Faculty extends Employee {
      */
     public String getResearchArea() {
         // TODO implement here
-        return "";
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -75,7 +76,7 @@ public class Faculty extends Employee {
      */
     public int getNumCourses() {
         // TODO implement here
-        return 0;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -84,7 +85,7 @@ public class Faculty extends Employee {
      */
     public void addCourse(String course) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -94,7 +95,7 @@ public class Faculty extends Employee {
      */
     public void setCourse(String course, int index) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -109,17 +110,17 @@ public class Faculty extends Employee {
      * @param index 
      * @return
      */
-    public void deleteCourse(int index) {
+    public String deleteCourse(int index) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
      * @return
      */
-    public void toString() {
+    public String toString() {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
 }
