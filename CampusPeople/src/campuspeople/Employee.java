@@ -42,7 +42,7 @@ public class Employee extends Person {
      */
     public void setHireDate(Date hireDate) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -50,7 +50,7 @@ public class Employee extends Person {
      */
     public Date getHireDate() {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -59,7 +59,7 @@ public class Employee extends Person {
      */
     public void setStatus(String status) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -67,7 +67,7 @@ public class Employee extends Person {
      */
     public String getStatus() {
         // TODO implement here
-        return "";
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -76,7 +76,7 @@ public class Employee extends Person {
      */
     public void setDepartment(Status department) {
         // TODO implement here
-        return null;
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -84,7 +84,7 @@ public class Employee extends Person {
      */
     public String getDepartment() {
         // TODO implement here
-        return "";
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
     /**
@@ -92,7 +92,7 @@ public class Employee extends Person {
      */
     public String toString() {
         // TODO implement here
-        return "";
+        throw new java.lang.UnsupportedOperationException("Not implemented yet");
     }
 
 }
