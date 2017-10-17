@@ -9,27 +9,27 @@ import java.util.*;
 public class Person {
 
     /**
-     * 
+     * The given name of a Person
      */
     protected String firstname;
 
     /**
-     * 
+     * The family name of a Person
      */
     protected String lastname;
 
     /**
-     * 
+     * Assigned 9-digit number for a Person
      */
     protected String studentId;
 
     /**
-     * 
+     * Date of a person's birth
      */
     protected Date birthDate;
 
     /**
-     * 
+     * 10-digit phone number separated with "-"
      */
     protected String phoneNumber;
     
@@ -45,21 +45,22 @@ public class Person {
     }
 
     /**
-     * 
-     */
-    public void Person() {
-        // TODO implement here
-    }
-
-    /**
      * @param firstname 
      * @param lastname 
      * @param studentId 
      * @param birthDate 
      * @param phoneNumber
      */
-    public void Person(String firstname, String lastname, String studentId, String birthDate, String phoneNumber) {
-        // TODO implement here
+    public Person(String firstname, String lastname, String studentId, String birthDate, String phoneNumber) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.studentId = studentId;
+        this.birthDate = new Date();
+        String[] dateArray = birthDate.split("/");
+        this.birthDate.setYear(Integer.parseInt(dateArray[2].trim()));
+        this.birthDate.setMonth(Integer.parseInt(dateArray[1].trim()));
+        this.birthDate.setYear(Integer.parseInt(dateArray[0].trim()));
+        this.phoneNumber = phoneNumber;
     }
 
     /**
