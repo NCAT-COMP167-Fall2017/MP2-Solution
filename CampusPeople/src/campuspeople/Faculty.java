@@ -106,8 +106,16 @@ public class Faculty extends Employee {
      * @return
      */
     public String toString() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        String returnString = super.toString() + System.lineSeparator() + rank + ", " + researchArea;
+        
+        if(currentCourses.size() > 0) {
+            returnString += System.lineSeparator() + currentCourses.get(0);
+            for(int i = 1; i < currentCourses.size(); i++) {
+                returnString += ", " + currentCourses.get(i);
+            }
+        }
+        
+        return returnString;
     }
 
 }
