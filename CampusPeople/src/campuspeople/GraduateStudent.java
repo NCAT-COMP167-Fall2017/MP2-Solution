@@ -58,16 +58,14 @@ public class GraduateStudent extends Student {
      * @return
      */
     public void setThesis(String thesis) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        this.thesis = thesis;
     }
 
     /**
      * @return
      */
     public String getThesis() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return thesis;
     }
 
     /**
@@ -75,16 +73,14 @@ public class GraduateStudent extends Student {
      * @return
      */
     public void setConcentration(String concentration) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        this.concentration = concentration;
     }
 
     /**
      * @return
      */
     public String getConcentration() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return concentration;
     }
 
     /**
@@ -92,16 +88,14 @@ public class GraduateStudent extends Student {
      * @return
      */
     public void setAssistanceType(String assistanceType) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        this.assistanceType = assistanceType;
     }
 
     /**
      * @return
      */
     public String getAssistanceType() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return assistanceType;
     }
 
     /**
