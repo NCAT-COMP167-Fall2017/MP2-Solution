@@ -63,16 +63,14 @@ public class Student extends Person {
      * @return
      */
     public void setMajor(String major) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        this.major = major;
     }
 
     /**
      * @return
      */
     public String getMajor() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return major;
     }
 
     /**
@@ -80,16 +78,14 @@ public class Student extends Person {
      * @return
      */
     public void setCreditHours(int creditHours) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        this.creditHours = creditHours;
     }
 
     /**
      * @return
      */
     public int getCreditHours() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return creditHours;
     }
 
     /**
@@ -97,24 +93,21 @@ public class Student extends Person {
      * @return
      */
     public void setGpa(float gpa) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        this.gpa = gpa;
     }
 
     /**
      * @return
      */
     public float getGpa() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return gpa;
     }
 
     /**
      * @return
      */
     public int getNumClasses() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return classSchedule.size();
     }
 
     /**
@@ -122,8 +115,7 @@ public class Student extends Person {
      * @return
      */
     public void addClass(String className) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        classSchedule.add(className);
     }
 
     /**
@@ -132,8 +124,7 @@ public class Student extends Person {
      * @return
      */
     public void setClass(int index, String className) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        classSchedule.set(index, className);
     }
 
     /**
@@ -141,8 +132,7 @@ public class Student extends Person {
      * @return
      */
     public String getClass(int index) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return classSchedule.get(index);
     }
 
     /**
@@ -150,8 +140,7 @@ public class Student extends Person {
      * @return
      */
     public String deleteClass(int index) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return classSchedule.remove(index);
     }
 
     /**
