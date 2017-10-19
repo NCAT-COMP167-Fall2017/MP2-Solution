@@ -7,13 +7,7 @@ import java.util.*;
  * 
  */
 public class Staff extends Employee {
-
-    /**
-     * Default constructor
-     */
-    public Staff() {
-    }
-
+    
     /**
      * 
      */
@@ -30,10 +24,13 @@ public class Staff extends Employee {
     protected String careerBand;
 
     /**
-     * 
+     * Default constructor
      */
-    public void Staff() {
-        // TODO implement here
+    public Staff() {
+        super();
+        jobTitle = "";
+        supervisor = "";
+        careerBand = "";
     }
 
     /**
