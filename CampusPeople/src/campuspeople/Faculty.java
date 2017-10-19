@@ -7,13 +7,7 @@ import java.util.*;
  * 
  */
 public class Faculty extends Employee {
-
-    /**
-     * Default constructor
-     */
-    public Faculty() {
-    }
-
+    
     /**
      * 
      */
@@ -30,10 +24,13 @@ public class Faculty extends Employee {
     protected ArrayList<String> currentCourses;
 
     /**
-     * 
+     * Default constructor
      */
-    public void Faculty() {
-        // TODO implement here
+    public Faculty() {
+        super();
+        rank = "";
+        researchArea = "";
+        currentCourses = new ArrayList<>();
     }
 
     /**
