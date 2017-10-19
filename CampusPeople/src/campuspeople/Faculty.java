@@ -38,16 +38,14 @@ public class Faculty extends Employee {
      * @return
      */
     public void setRank(String rank) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        this.rank = rank;
     }
 
     /**
      * @return
      */
     public String getRank() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return rank;
     }
 
     /**
@@ -55,25 +53,21 @@ public class Faculty extends Employee {
      * @return
      */
     public void setResearchArea(String researchArea) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
-
+        this.researchArea = researchArea;
     }
 
     /**
      * @return
      */
     public String getResearchArea() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return researchArea;
     }
 
     /**
      * @return
      */
     public int getNumCourses() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return currentCourses.size();
     }
 
     /**
@@ -81,8 +75,7 @@ public class Faculty extends Employee {
      * @return
      */
     public void addCourse(String course) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        currentCourses.add(course);
     }
 
     /**
@@ -91,16 +84,14 @@ public class Faculty extends Employee {
      * @return
      */
     public void setCourse(String course, int index) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        currentCourses.set(index, course);
     }
 
     /**
      * @return
      */
-    public String getCourse() {
-        // TODO implement here
-        return "";
+    public String getCourse(int index) {
+        return currentCourses.get(index);
     }
 
     /**
@@ -108,8 +99,7 @@ public class Faculty extends Employee {
      * @return
      */
     public String deleteCourse(int index) {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return currentCourses.remove(index);
     }
 
     /**
