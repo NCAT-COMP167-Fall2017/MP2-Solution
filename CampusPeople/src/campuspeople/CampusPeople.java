@@ -15,7 +15,7 @@ public class CampusPeople {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Person dudebuddy = new Person("Chris", "Cannon", "12345678", "03/10/1994", "704-867-5309");
     }
     
 }

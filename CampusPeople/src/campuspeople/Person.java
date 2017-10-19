@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class Person {
 
-    protected final SimpleDateFormat myDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+    protected final SimpleDateFormat myDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
     
     /**
