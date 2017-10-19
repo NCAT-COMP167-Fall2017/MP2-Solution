@@ -9,12 +9,6 @@ import java.util.*;
 public class Student extends Person {
 
     /**
-     * Default constructor
-     */
-    public Student() {
-    }
-
-    /**
      * 
      */
     protected String major;
@@ -36,10 +30,14 @@ public class Student extends Person {
 
 
     /**
-     * 
+     * Default constructor
      */
-    public void Student() {
-        // TODO implement here
+    public Student() {
+        super();
+        major = "";
+        creditHours = 0;
+        gpa = 0.0f;
+        classSchedule = new ArrayList<>();
     }
 
     /**
