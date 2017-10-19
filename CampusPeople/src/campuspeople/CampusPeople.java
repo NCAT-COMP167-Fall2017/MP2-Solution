@@ -65,6 +65,26 @@ public class CampusPeople {
         drDude.setDepartment("Electrical and Computer Engineering");
         drDude.setRank("Associate");
         drDude.setResearchArea("Sparky stff");
+        
+        Staff msLady = new Staff();
+        msLady.setFirstName("Amy");
+        msLady.setLastName("Farfowler");
+        try {
+            msLady.setBirthDate(myDateFormat.parse("7/4/1999"));
+        } catch (ParseException ex) {
+            Logger.getLogger(CampusPeople.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        msLady.setPhoneNumber("111-867-5309");
+        msLady.setDepartment("Facilities");
+        try {
+            msLady.setHireDate(myDateFormat.parse("10/16/2017"));
+        } catch (ParseException ex) {
+            Logger.getLogger(CampusPeople.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        msLady.setSupervisor("Meanie BossMan");
+        msLady.setStatus("FT");
+        msLady.setJobTitle("Chief Chiefer in Chief");
+        msLady.setCareerBand("Advanced");
     }
     
 }
