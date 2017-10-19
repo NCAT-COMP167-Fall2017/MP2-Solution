@@ -147,8 +147,16 @@ public class Student extends Person {
      * @return
      */
     public String toString() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        String returnString = super.toString() + System.lineSeparator() + major + ", " + creditHours + ", " + gpa;
+        
+        if(classSchedule.size() > 0) {
+            returnString += System.lineSeparator() + classSchedule.get(0) + ", ";
+            for(int i = 1; i < classSchedule.size(); i++) {
+                returnString += ", " + classSchedule.get(i);
+            }
+        }
+        
+        return returnString;
     }
 
 }
