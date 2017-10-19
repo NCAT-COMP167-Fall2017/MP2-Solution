@@ -9,12 +9,6 @@ import java.util.*;
 public class GraduateStudent extends Student {
 
     /**
-     * Default constructor
-     */
-    public GraduateStudent() {
-    }
-
-    /**
      * 
      */
     protected String thesis;
@@ -30,10 +24,13 @@ public class GraduateStudent extends Student {
     protected String assistanceType;
 
     /**
-     * 
+     * Default constructor
      */
-    public void GraduateStudent() {
-        // TODO implement here
+    public GraduateStudent() {
+        super();
+        thesis = "";
+        concentration = "";
+        assistanceType = "";
     }
 
     /**
@@ -49,8 +46,11 @@ public class GraduateStudent extends Student {
      * @param concentration 
      * @param assistanceType
      */
-    public void GraduateStudent(String firstname, String lastname, String studentId, String birthDate, String phoneNumber, String major, int creditHours, float gpa, String thesis, String concentration, String assistanceType) {
-        // TODO implement here
+    public GraduateStudent(String firstname, String lastname, String studentId, String birthDate, String phoneNumber, String major, int creditHours, float gpa, String thesis, String concentration, String assistanceType) {
+        super(firstname, lastname, studentId, birthDate, phoneNumber, major, creditHours, gpa);
+        this.thesis = thesis;
+        this.concentration = concentration;
+        this.assistanceType = assistanceType;
     }
 
     /**
