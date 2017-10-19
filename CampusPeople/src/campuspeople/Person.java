@@ -158,7 +158,7 @@ public class Person {
      * @return String representing this person in accordance with the documentation
      */
     public String toString() {
-        String birthDateString = myDateFormat.format(lastname);
+        String birthDateString = myDateFormat.format(birthDate);
         return this.firstname + ", " + this.lastname + ", " + this.studentId + ", " + birthDateString + ", " + this.phoneNumber;
     }
 

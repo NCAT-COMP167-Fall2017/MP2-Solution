@@ -9,6 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -23,16 +24,20 @@ public class CampusPeople {
         SimpleDateFormat myDateFormat = new SimpleDateFormat("MM/dd/yyyy");
         
         Person dudebuddy = new Person("Chris", "Cannon", "12345678", "03/10/1994", "704-867-5309");
+        JOptionPane.showMessageDialog(null, dudebuddy.toString(), "Person", JOptionPane.PLAIN_MESSAGE);
         
         Student dudeguy = new Student("Bob", "McGee", "8993432", "01/10/1998", "123-456-7890", "Computer Science", 42, 3.3f);
         dudeguy.addClass("COMP 123");
         dudeguy.addClass("MATH 132");
         dudeguy.addClass("PHYS 242");
+        JOptionPane.showMessageDialog(null, dudeguy.toString(), "Student", JOptionPane.PLAIN_MESSAGE);
+
         
         GraduateStudent homeboy = new GraduateStudent("Milly", "Mckillicutty", "34390482", "06/06/2001", "911-999-9191", "Electrical Engineering", 71, 3.12f, "Effects of autonomous technology in mobility", "Autonomous Robotics", "RA");
         homeboy.addClass("COMP 726");
         homeboy.addClass("ECEN 654");
         homeboy.addClass("ECEN 1321");
+        JOptionPane.showMessageDialog(null, homeboy.toString(), "Graduate Student", JOptionPane.PLAIN_MESSAGE);
         
         Employee mrGuy = new Employee();
         mrGuy.setFirstName("John");
@@ -45,6 +50,7 @@ public class CampusPeople {
         }
         mrGuy.setStatus("FT");
         mrGuy.setDepartment("Mechnical Engineering");
+        JOptionPane.showMessageDialog(null, mrGuy.toString(), "Employee", JOptionPane.PLAIN_MESSAGE);
         
         Faculty drDude = new Faculty();
         drDude.setFirstName("Kelvin");
@@ -65,6 +71,7 @@ public class CampusPeople {
         drDude.setDepartment("Electrical and Computer Engineering");
         drDude.setRank("Associate");
         drDude.setResearchArea("Sparky stff");
+        JOptionPane.showMessageDialog(null, drDude.toString(), "Faculty", JOptionPane.PLAIN_MESSAGE);
         
         Staff msLady = new Staff();
         msLady.setFirstName("Amy");
@@ -85,6 +92,7 @@ public class CampusPeople {
         msLady.setStatus("FT");
         msLady.setJobTitle("Chief Chiefer in Chief");
         msLady.setCareerBand("Advanced");
+        JOptionPane.showMessageDialog(null, msLady.toString(), "Staff", JOptionPane.PLAIN_MESSAGE);
     }
     
 }
