@@ -9,12 +9,6 @@ import java.util.*;
 public class Employee extends Person {
 
     /**
-     * Default constructor
-     */
-    public Employee() {
-    }
-
-    /**
      * 
      */
     protected Date hireDate;
@@ -30,10 +24,13 @@ public class Employee extends Person {
     protected String department;
 
     /**
-     * 
+     * Default constructor
      */
-    public void Employee() {
-        // TODO implement here
+    public Employee() {
+        super();
+        hireDate = new Date();
+        status = "";
+        department = "";
     }
 
     /**
