@@ -82,8 +82,7 @@ public class Staff extends Employee {
      * @return
      */
     public String toString() {
-        // TODO implement here
-        throw new java.lang.UnsupportedOperationException("Not implemented yet");
+        return super.toString() + System.lineSeparator() + jobTitle + ", " + supervisor + ", " + careerBand;
     }
 
 }
