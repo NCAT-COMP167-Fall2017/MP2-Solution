@@ -3887,7 +3887,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "+getCourse(): String",
+											"text": "+getCourse(index: int): String",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -8923,6 +8923,22 @@
 							"isStatic": false,
 							"isLeaf": false,
 							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFfNmshAwvR10Q=",
+									"_parent": {
+										"$ref": "AAAAAAFfK5lJHwilQpQ="
+									},
+									"name": "index",
+									"visibility": "public",
+									"isStatic": false,
+									"isLeaf": false,
+									"type": "int",
+									"isReadOnly": false,
+									"isOrdered": false,
+									"isUnique": false,
+									"direction": "in"
+								},
 								{
 									"_type": "UMLParameter",
 									"_id": "AAAAAAFfK5nyGgi5RQM=",
