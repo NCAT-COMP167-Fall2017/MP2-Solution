@@ -50,8 +50,12 @@ public class Student extends Person {
      * @param creditHours 
      * @param gpa
      */
-    public void Student(String firstname, String lastname, String studentId, String birthDate, String phoneNumber, String major, int creditHours, float gpa) {
-        // TODO implement here
+    public Student(String firstname, String lastname, String studentId, String birthDate, String phoneNumber, String major, int creditHours, float gpa) {
+        super(firstname, lastname, studentId, birthDate, phoneNumber);
+        this.major = major;
+        this.creditHours = creditHours;
+        this.gpa = gpa;
+        classSchedule = new ArrayList<>();
     }
 
     /**
