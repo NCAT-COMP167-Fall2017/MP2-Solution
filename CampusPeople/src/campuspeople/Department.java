@@ -1,7 +1,14 @@
 package campuspeople;
 
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * 
@@ -12,6 +19,9 @@ public class Department {
     private String location;
     private ArrayList<Employee> employees;
     private ArrayList<Student> students;
+    
+    private Scanner reader;
+    private final SimpleDateFormat myDateFormat = new SimpleDateFormat("MM/dd/yyyy");
     
     /**
      * Default constructor
@@ -95,6 +105,121 @@ public class Department {
     
     public Employee removeEmployee(int index) {
         return employees.remove(index);
+    }
+    
+    public void readDepartment(String filename) { 
+        try {
+            reader = new Scanner(new File(filename));
+            
+            this.name = reader.nextLine();
+            this.location = reader.nextLine();
+            
+            char personType = reader.nextLine().trim().charAt(0);
+            
+            switch(personType) {
+                case 'G':
+                    readGraduateStudent();
+                    break;
+                case 'U':
+                    readUndergraduateStudent();
+                    break;
+                case 'F':
+                    readFacultyMember();
+                    break;
+                case 'S':
+                    readStaffMember();
+                    break;
+            }
+        } catch (FileNotFoundException ex) {
+            System.err.println("Failed to open Department file for reading");
+            Logger.getLogger(Department.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    private void readPerson(Person person) {
+        String[] personLine = reader.nextLine().split(",");
+        person.setFirstName(personLine[0].trim());
+        person.setLastName(personLine[1].trim());
+        person.setStudentId(personLine[2].trim());
+        try {
+            person.setBirthDate(myDateFormat.parse(personLine[2].trim()));
+        } catch (ParseException ex) {
+            System.err.println("Failed to convert birth date for " + person.firstname + " " + person.lastname);
+            Logger.getLogger(Department.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        person.setPhoneNumber(personLine[3]);
+    }
+    
+    private void readStudent(Student student) {
+        String[] studentLine = reader.nextLine().split(",");
+        String[] classLine = reader.nextLine().split(",");
+        
+        student.setMajor(studentLine[0].trim());
+        student.setCreditHours(Integer.parseInt(studentLine[1].trim()));
+        student.setGpa(Float.parseFloat(studentLine[2].trim()));
+        
+        for(int i = 0; i < classLine.length; i++) {
+            student.addClass(classLine[i].trim());
+        }
+    }
+    
+    private void readGraduateStudent() {
+        GraduateStudent student = new GraduateStudent();
+        readPerson(student);
+        readStudent(student);
+        
+        String[] graduateStudentLine = reader.nextLine().split("");
+        student.setThesis(graduateStudentLine[0].trim());
+        student.setConcentration(graduateStudentLine[1].trim());
+        student.setAssistanceType(graduateStudentLine[2].trim());
+        
+        students.add(student);
+    }
+    
+    private void readUndergraduateStudent() {
+        Student student = new Student();
+        readPerson(student);
+        readStudent(student);
+        
+        students.add(student);
+    }
+    
+    private void readEmployee(Employee employee) {
+        String[] employeeLine = reader.nextLine().split(",");
+        try {
+            employee.setHireDate(myDateFormat.parse(employeeLine[0].trim()));
+        } catch (ParseException ex) {
+            System.err.println("Failed to convert hire date for " + employee.firstname + " " + employee.lastname);
+            Logger.getLogger(Department.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        employee.setStatus(employeeLine[1].trim());
+        employee.setDepartment(employeeLine[2].trim());
+    }
+    
+    private void readFacultyMember() {
+        Faculty faculty = new Faculty();
+        readPerson(faculty);
+        readEmployee(faculty);
+        String[] facultyLine = reader.nextLine().split(",");
+        String[] classLine = reader.nextLine().split(",");
+        
+        faculty.setRank(facultyLine[0].trim());
+        faculty.setResearchArea(facultyLine[1].trim());
+        
+        for(int i = 0; i < classLine.length; i++) {
+            faculty.addCourse(classLine[i].trim());
+        }
+    }
+    
+    private void readStaffMember() {
+        Staff staff = new Staff();
+        readPerson(staff);
+        readEmployee(staff);
+        String[] staffLine = reader.nextLine().split(",");
+        
+        staff.setJobTitle(staffLine[0].trim());
+        staff.setSupervisor(staffLine[1].trim());
+        staff.setCareerBand(staffLine[3].trim());
     }
     
     public String toString() { 
