@@ -128,21 +128,23 @@ public class Department {
             this.name = reader.nextLine();
             this.location = reader.nextLine();
             
-            char personType = reader.nextLine().trim().charAt(0);
-            
-            switch(personType) {
-                case 'G':
-                    readGraduateStudent();
-                    break;
-                case 'U':
-                    readUndergraduateStudent();
-                    break;
-                case 'F':
-                    readFacultyMember();
-                    break;
-                case 'S':
-                    readStaffMember();
-                    break;
+            while(reader.hasNext()) {
+                char personType = reader.nextLine().trim().charAt(0);
+
+                switch(personType) {
+                    case 'G':
+                        readGraduateStudent();
+                        break;
+                    case 'U':
+                        readUndergraduateStudent();
+                        break;
+                    case 'F':
+                        readFacultyMember();
+                        break;
+                    case 'S':
+                        readStaffMember();
+                        break;
+                }
             }
         } catch (FileNotFoundException ex) {
             System.err.println("Failed to open " + filename + " for reading");

@@ -84,13 +84,8 @@ public class CampusPeople {
         compSci.addEmployee(faculty);
         compSci.addEmployee(staff);
         
-        TextInputDialog saveDialog = new TextInputDialog();
-        saveDialog.setTitle("Save Department");
-        saveDialog.setHeaderText(compSci.getName() + System.lineSeparator() + compSci.getLocation());
-        saveDialog.setContentText("Please enter save file name:");
-        
-        Optional<String> result = saveDialog.showAndWait();
-        result.ifPresent(filename -> compSci.writeDepartment(filename));
+        String filename = JOptionPane.showInputDialog(null, "Please enter a save file name:", "Save Department", JOptionPane.QUESTION_MESSAGE);
+        compSci.writeDepartment(filename);
     }
     
 }
