@@ -156,12 +156,12 @@ public class Department {
         person.setLastName(personLine[1].trim());
         person.setStudentId(personLine[2].trim());
         try {
-            person.setBirthDate(myDateFormat.parse(personLine[2].trim()));
+            person.setBirthDate(myDateFormat.parse(personLine[3].trim()));
         } catch (ParseException ex) {
             System.err.println("Failed to convert birth date for " + person.firstname + " " + person.lastname);
             Logger.getLogger(Department.class.getName()).log(Level.SEVERE, null, ex);
         }
-        person.setPhoneNumber(personLine[3]);
+        person.setPhoneNumber(personLine[4]);
     }
     
     private void readStudent(Student student) {
