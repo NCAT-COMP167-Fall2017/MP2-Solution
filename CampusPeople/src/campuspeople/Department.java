@@ -3,6 +3,8 @@ package campuspeople;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -105,6 +107,18 @@ public class Department {
     
     public Employee removeEmployee(int index) {
         return employees.remove(index);
+    }
+    
+    public void writeDepartment(String filename) {
+        try {
+            FileWriter writer = new FileWriter(new File(filename));
+            
+            writer.write(this.toString());
+            writer.close();
+        } catch (IOException ex) {
+            System.err.println("Unable to open " + filename + " to write department.");
+            Logger.getLogger(Department.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     public void readDepartment(String filename) { 
