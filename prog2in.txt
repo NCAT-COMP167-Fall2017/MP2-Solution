@@ -1,3 +1,5 @@
+Department of Computer Science
+McNair Hall 5th Floor
 U
 Christopher,Rich,      123456789, 06/17/1988    ,    336-404-5454
 Computer Science, 51,3.52
@@ -63,8 +65,7 @@ Multicore super processing on an Intel machine,Information technology,TA
 U
 George,Foreman,59615687,9/26/1967,399-456-0987
 Physics,35,3.56
-GEEN 165,MATH 431,ENG 101,
-HIST 300
+GEEN 165,MATH 431,ENG 101,HIST 300
 S
 Joe, Jones,050123809,6/11/1984,301-302-4009
 3/16/2015,PT, Student Union
