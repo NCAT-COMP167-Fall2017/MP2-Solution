@@ -184,7 +184,7 @@ public class Department {
         readPerson(student);
         readStudent(student);
         
-        String[] graduateStudentLine = reader.nextLine().split("");
+        String[] graduateStudentLine = reader.nextLine().split(",");
         student.setThesis(graduateStudentLine[0].trim());
         student.setConcentration(graduateStudentLine[1].trim());
         student.setAssistanceType(graduateStudentLine[2].trim());
