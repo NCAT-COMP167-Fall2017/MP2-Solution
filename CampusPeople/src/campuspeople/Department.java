@@ -96,4 +96,25 @@ public class Department {
     public Employee removeEmployee(int index) {
         return employees.remove(index);
     }
+    
+    public String toString() { 
+        String returnString = name + System.lineSeparator() + location;
+        
+        for(Student student : students) {
+            if(student.getClass() == GraduateStudent.class) {
+                returnString += System.lineSeparator() + "G" + System.lineSeparator() + student.toString();
+            } else {
+                returnString += System.lineSeparator() + "U" + System.lineSeparator() + student.toString();
+            }
+        }
+        for(Employee employee : employees) {
+            if(employee.getClass() == Faculty.class) { 
+                returnString += System.lineSeparator() + "F" + System.lineSeparator() + employee.toString();
+            } else {
+                returnString += System.lineSeparator() + "S" + System.lineSeparator() + employee.toString();
+            }
+        }
+        
+        return returnString;
+    }
 }
