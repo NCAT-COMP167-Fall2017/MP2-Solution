@@ -24,8 +24,7 @@ Jamie, Foxx,45504532,12/16/1985, 757-946-7654
 Assistant, Research and Development
 CHEM131 , MATH 105 , PHYS 202
 F
-Condoleezza, Rice, 45504532, 11/14/1954
-359-456-0987
+Condoleezza, Rice, 45504532, 11/14/1954, 359-456-0987
 4/16/2005, FT, Political Science
 Full, International Relations
 POSC765, ECON440
