@@ -145,7 +145,7 @@ public class Department {
                     break;
             }
         } catch (FileNotFoundException ex) {
-            System.err.println("Failed to open Department file for reading");
+            System.err.println("Failed to open " + filename + " for reading");
             Logger.getLogger(Department.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
