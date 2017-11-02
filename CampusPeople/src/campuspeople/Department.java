@@ -235,7 +235,7 @@ public class Department {
         
         staff.setJobTitle(staffLine[0].trim());
         staff.setSupervisor(staffLine[1].trim());
-        staff.setCareerBand(staffLine[3].trim());
+        staff.setCareerBand(staffLine[2].trim());
     }
     
     public String toString() { 
